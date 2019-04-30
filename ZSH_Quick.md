@@ -44,6 +44,10 @@ plugins=(
   ...
 )
 ```
+Restart zsh (such as by opening a new instance of your terminal emulator) or reload zsh:
+```shell
+source ~/.zshrc
+```
 
 * Using Plugins
 Most plugins include a __README__, which documents how to use them.
@@ -53,18 +57,9 @@ Most plugins include a __README__, which documents how to use them.
 * If you have many functions that go well together, you can put them as a `XYZ.plugin.zsh` file in the `custom/plugins/` directory and then enable this plugin.
 * If you would like to override the functionality of a plugin distributed with Oh My Zsh, create a plugin of the same name in the `custom/plugins/` directory and it will be loaded instead of the one in `plugins/`.
 
+* Clone these repositories in oh-my-zsh's custom plugins directory
+
 #### [zsh-completions](https://github.com/zsh-users/zsh-completions)
-* Clone this repository in oh-my-zsh's plugins directory
 ```shell
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-```
-
-* Activate the plugin in `~/.zshrc`
-```shell
-plugins=( [plugins...] zsh-syntax-highlighting)
-```
-
-* Restart zsh (such as by opening a new instance of your terminal emulator)
-```shell
-source ~/.zshrc
 ```
