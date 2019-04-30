@@ -74,7 +74,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ```shell
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
-(Why must zsh-syntax-highlighting.zsh be sourced at the end of the .zshrc file?)[https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file]
+[Why must zsh-syntax-highlighting.zsh be sourced at the end of the .zshrc file?](https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file)
 
 #### [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
 ```shell
@@ -88,3 +88,37 @@ plugins=(
   zsh-history-substring-search
 )
 ```
+
+#### [zaw](https://github.com/zsh-users/zaw)
+```shell
+git clone git://github.com/zsh-users/zaw.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zaw
+```
+
+#### [autojump](https://github.com/wting/autojump)
+#### [z](https://github.com/rupa/z)
+#### [z.lua](https://github.com/skywind3000/z.lua)
+
+### Themes
+
+We'll admit it. Early in the Oh My Zsh world, we may have gotten a bit too theme happy. We have over one hundred themes now bundled. Most of them have [screenshots](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes) on the wiki. Check them out!
+
+#### Selecting a Theme
+
+_Robby's theme is the default one. It's not the fanciest one. It's not the simplest one. It's just the right one (for him)._
+
+Once you find a theme that you'd like to use, you will need to edit the `~/.zshrc` file. You'll see an environment variable (all caps) in there that looks like:
+
+```shell
+ZSH_THEME="robbyrussell"
+```
+
+To use a different theme, simply change the value to match the name of your desired theme. For example:
+
+```shell
+ZSH_THEME="agnoster" # (this is one of the fancy ones)
+# see https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#agnoster
+```
+
+_Note: many themes require installing the [Powerline Fonts](https://github.com/powerline/fonts) in order to render properly._
+
+In case you did not find a suitable theme for your needs, please have a look at the wiki for [more of them](https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes).
