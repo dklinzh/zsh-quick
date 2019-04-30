@@ -12,7 +12,7 @@ Try `zsh --version` before installing it from Homebrew. If it's newer than **4.3
 brew install zsh zsh-completions
 ```
 
-To set zsh as your default shel.
+To set zsh as your default shell.
 ```shell
 chsh -s /bin/zsh
 ```
@@ -34,7 +34,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ```
 
 ### [Plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)
-Oh My Zsh comes with a shitload of plugins to take advantage of. You can take a look in the [plugins](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins) directory and/or the wiki to see what's currently available.
+Oh My Zsh comes with a shitload of plugins to take advantage of. You can take a look in the [plugins](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins) directory and/or the [wiki](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins) to see what's currently available.
 
 #### Enabling Plugins
 Once you spot a plugin (or several) that you'd like to use with Oh My Zsh, you'll need to enable them in the `.zshrc` file. You'll find the zshrc file in your `$HOME` directory. Open it with your favorite text editor and you'll see a spot to list all the plugins you want to load. For example, this might begin to look like this:
@@ -48,3 +48,10 @@ plugins=(
 
 #### Using Plugins
 Most plugins include a __README__, which documents how to use them.
+
+### Custom Plugins
+If you want to override any of the default behaviors, just add a new file (ending in `.zsh`) in the `custom/` directory.
+
+If you have many functions that go well together, you can put them as a `XYZ.plugin.zsh` file in the `custom/plugins/` directory and then enable this plugin.
+
+If you would like to override the functionality of a plugin distributed with Oh My Zsh, create a plugin of the same name in the `custom/plugins/` directory and it will be loaded instead of the one in `plugins/`.
