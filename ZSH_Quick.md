@@ -11,8 +11,7 @@ git clone https://git.code.sf.net/p/zsh/code zsh-code
 ```shell
 brew install zsh zsh-completions
 ```
-
-To set zsh as your default shell.
+* To set zsh as your default shell.
 ```shell
 chsh -s /bin/zsh
 ```
@@ -36,7 +35,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ### [Plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)
 Oh My Zsh comes with a shitload of plugins to take advantage of. You can take a look in the [plugins](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins) directory and/or the [wiki](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins) to see what's currently available.
 
-#### Enabling Plugins
+* Enabling Plugins
 Once you spot a plugin (or several) that you'd like to use with Oh My Zsh, you'll need to enable them in the `.zshrc` file. You'll find the zshrc file in your `$HOME` directory. Open it with your favorite text editor and you'll see a spot to list all the plugins you want to load. For example, this might begin to look like this:
 ```shell
 plugins=(
@@ -46,14 +45,26 @@ plugins=(
 )
 ```
 
-#### Using Plugins
+* Using Plugins
 Most plugins include a __README__, which documents how to use them.
 
 ### Custom Plugins
-If you want to override any of the default behaviors, just add a new file (ending in `.zsh`) in the `custom/` directory.
-
-If you have many functions that go well together, you can put them as a `XYZ.plugin.zsh` file in the `custom/plugins/` directory and then enable this plugin.
-
-If you would like to override the functionality of a plugin distributed with Oh My Zsh, create a plugin of the same name in the `custom/plugins/` directory and it will be loaded instead of the one in `plugins/`.
+* If you want to override any of the default behaviors, just add a new file (ending in `.zsh`) in the `custom/` directory.
+* If you have many functions that go well together, you can put them as a `XYZ.plugin.zsh` file in the `custom/plugins/` directory and then enable this plugin.
+* If you would like to override the functionality of a plugin distributed with Oh My Zsh, create a plugin of the same name in the `custom/plugins/` directory and it will be loaded instead of the one in `plugins/`.
 
 #### [zsh-completions](https://github.com/zsh-users/zsh-completions)
+* Clone this repository in oh-my-zsh's plugins directory
+```shell
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+```
+
+* Activate the plugin in `~/.zshrc`
+```shell
+plugins=( [plugins...] zsh-syntax-highlighting)
+```
+
+* Restart zsh (such as by opening a new instance of your terminal emulator)
+```shell
+source ~/.zshrc
+```
