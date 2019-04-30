@@ -40,11 +40,12 @@ Once you spot a plugin (or several) that you'd like to use with Oh My Zsh, you'l
 ```shell
 plugins=(
   git
-  osx
+  zsh-completions
   ...
 )
 ```
-Restart zsh (such as by opening a new instance of your terminal emulator) or reload zsh:
+
+* Restart zsh (such as by opening a new instance of your terminal emulator) or reload zsh:
 ```shell
 source ~/.zshrc
 ```
@@ -57,9 +58,33 @@ Most plugins include a __README__, which documents how to use them.
 * If you have many functions that go well together, you can put them as a `XYZ.plugin.zsh` file in the `custom/plugins/` directory and then enable this plugin.
 * If you would like to override the functionality of a plugin distributed with Oh My Zsh, create a plugin of the same name in the `custom/plugins/` directory and it will be loaded instead of the one in `plugins/`.
 
-* Clone these repositories in oh-my-zsh's custom plugins directory
+*Clone these repositories in oh-my-zsh's custom plugins directory:*
 
 #### [zsh-completions](https://github.com/zsh-users/zsh-completions)
 ```shell
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+```
+
+#### [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+#### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+(Why must zsh-syntax-highlighting.zsh be sourced at the end of the .zshrc file?)[https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file]
+
+#### [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+```shell
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+```
+If you want to use `zsh-syntax-highlighting` along with this script, then make sure that you load `zsh-syntax-highlighting` **before** you load `zsh-history-substring-search`:
+```shell
+plugins=(
+  ...
+  zsh-syntax-highlighting
+  zsh-history-substring-search
+)
 ```
